@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+<h1>
+    View Levels
+</h1>
+<table class='table'>
+    <tr>
+          <th>
+                Level Name
+            </th>
+        <th>
+            Level Price
+        </th>
+        <th>
+            Level Description
+        </th>
+        <th>
+            Delete Level
+        </th>
+        </tr>
+        {{for row in rows:}}
+        <tr>
+            <td> {{=row.level_name}}</td><td>{{=row.price}}</td><td>{{=row.description}}</td><td><a href='https://aa72d8fc89.pythonanywhere.com/dzChicago/default/delete_level/{{=row.id}}'>Delete Level</a></td>{{pass}}
+        </tr>
+</table>

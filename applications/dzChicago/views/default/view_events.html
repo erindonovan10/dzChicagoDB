@@ -1,0 +1,27 @@
+{{extend 'layout.html'}}
+<h1>
+    View Events
+</h1>
+<table class='table'>
+    <tr>
+          <th>
+                Event Name
+            </th>
+        <th>
+            Event Description
+        </th>
+            <th>
+                Members Attendance
+            </th>
+        <th>
+            Non Members Attendance
+        </th>
+        <th>
+            Delete Event
+        </th>
+        </tr>
+        {{for level in levels:}}
+        <tr>
+            <td> {{=level.event_attendance.event_name}}</td><td>{{=level.event_attendance.description}}</td><td>{{=level.members.first_name}}</td><td> {{=level.event_attendance.non_members}}</td><td><a href='https://aa72d8fc89.pythonanywhere.com/dzChicago/default/delete_event/{{=level.event_attendance.id}}'>Delete</a></td>{{pass}}
+        </tr>
+</table>
